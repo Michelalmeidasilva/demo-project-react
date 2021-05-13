@@ -55,7 +55,6 @@ const WrapMenuHeader = styled.div`
 const MenuHeader = styled.section`
   background: 15171c;
   width: max-width;
-
   height: 100px;
   display: flex;
 `
@@ -65,9 +64,6 @@ const SidebarNav = styled.nav`
   height: 100vh;
   display: flex;
   justify-content: center;
-  position: fixed;
-  left: 0;
-  top: 0;
   width: 350px;
 `
 
