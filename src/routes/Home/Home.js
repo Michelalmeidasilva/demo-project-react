@@ -10,10 +10,37 @@ import Recrutamento from 'routes/Recrutamento'
 import Contato from 'routes/Contato'
 import Sobre from 'routes/Sobre'
 
+export const Rotas = [
+  {
+    title: 'Agenda',
+    path: '/agenda'
+  },
+  {
+    title: 'Comunicados',
+    path: '/comunicados'
+  },
+  {
+    title: 'Tutoriais',
+    path: '/tutoriais'
+  },
+  {
+    title: 'Recrutamento',
+    path: '/recrutamento'
+  },
+  {
+    title: 'Contato',
+    path: '/contato'
+  },
+  {
+    title: 'Sobre',
+    path: '/sobre'
+  }
+]
+
 const Home = () => {
   return (
     <Switch>
-      <SideBar width={'350px'} />
+      <SideBar rotas={Rotas} />
       <Route path='/agenda' component={Agenda} />
       <Route path='/comunicados' component={Comunicados} />
       <Route path='/tutoriais' component={Tutoriais} />
