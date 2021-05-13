@@ -1,5 +1,6 @@
 import React from 'react'
 import { BrowserRouter as Switch, Route } from 'react-router-dom'
+import styled from 'styled-components'
 
 import SideBar from 'components/SideBar'
 
@@ -39,16 +40,22 @@ export const Rotas = [
 
 const Home = () => {
   return (
-    <Switch>
-      <SideBar rotas={Rotas} />
-      <Route path='/agenda' component={Agenda} />
-      <Route path='/comunicados' component={Comunicados} />
-      <Route path='/tutoriais' component={Tutoriais} />
-      <Route path='/recrutamento' component={Recrutamento} />
-      <Route path='/contato' component={Contato} />
-      <Route path='/sobre' component={Sobre} />
-    </Switch>
+    <FlexLayout>
+      <Switch>
+        <SideBar rotas={Rotas} />
+        <Route path='/agenda' component={Agenda} />
+        <Route path='/comunicados' component={Comunicados} />
+        <Route path='/tutoriais' component={Tutoriais} />
+        <Route path='/recrutamento' component={Recrutamento} />
+        <Route path='/contato' component={Contato} />
+        <Route path='/sobre' component={Sobre} />
+      </Switch>
+    </FlexLayout>
   )
 }
+
+const FlexLayout = styled.div`
+  display: flex;
+`
 
 export default Home
