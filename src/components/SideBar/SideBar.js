@@ -1,33 +1,65 @@
 import React, { Fragment } from 'react'
 import styled from 'styled-components'
+import { BrowserRouter as Switch, Route } from 'react-router-dom'
 
 import GuildIcon from '../../assets/guild-icon.png'
 
-import { SideBarItems } from './SideBarItems'
-import MenuItems from './MenuItems'
-const SideBar = props => {
+import MenuItens from './MenuItens'
+
+import Agenda from 'routes/Agenda'
+import Comunicados from 'routes/Comunicados'
+import Tutoriais from 'routes/Tutoriais'
+import Recrutamento from 'routes/Recrutamento'
+import Contato from 'routes/Contato'
+import Sobre from 'routes/Sobre'
+
+export const Data = [
+  {
+    title: 'Agenda',
+    path: '/agenda'
+  },
+  {
+    title: 'Comunicados',
+    path: '/comunicados'
+  },
+  {
+    title: 'Tutoriais',
+    path: '/tutoriais'
+  },
+  {
+    title: 'Recrutamento',
+    path: '/recrutamento'
+  },
+  {
+    title: 'Contato',
+    path: '/contato'
+  },
+  {
+    title: 'Sobre',
+    path: '/sobre'
+  }
+]
+
+const SideBar = () => {
   return (
     <Fragment>
-      <div value={{ color: '#fff' }}>
-        <SidebarNav width={props.width}>
-          <SidebarWrap>
-            <WrapMenuHeader>
-              <MenuHeader>
-                <IconMenuHeader src={GuildIcon} />
-                <TitleMenuHeader>
-                  <TextMenuHeader> Test </TextMenuHeader>
-                </TitleMenuHeader>
-              </MenuHeader>
-            </WrapMenuHeader>
-            {SideBarItems.map((item, index) => {
-              return <MenuItems item={item} key={index} />
-            })}
-          </SidebarWrap>
-        </SidebarNav>
-      </div>
+      <SidebarNav>
+        <SidebarWrap>
+          <WrapMenuHeader>
+            <MenuHeader>
+              <IconMenuHeader src={GuildIcon} />
+              <TitleMenuHeader>
+                <TextMenuHeader> Test </TextMenuHeader>
+              </TitleMenuHeader>
+            </MenuHeader>
+          </WrapMenuHeader>
+          <MenuItens data={Data}></MenuItens>
+        </SidebarWrap>
+      </SidebarNav>
     </Fragment>
   )
 }
+
 const TextMenuHeader = styled.text`
   font-size: 36px;
   color: white;
@@ -71,7 +103,7 @@ const SidebarNav = styled.nav`
   position: fixed;
   left: 0;
   top: 0;
-  width: ${props => props.width};
+  width: 350px;
 `
 
 const SidebarWrap = styled.div`
