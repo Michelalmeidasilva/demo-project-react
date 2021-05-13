@@ -1,46 +1,11 @@
 import React, { Fragment } from 'react'
 import styled from 'styled-components'
-import { BrowserRouter as Switch, Route } from 'react-router-dom'
 
 import GuildIcon from '../../assets/guild-icon.png'
 
 import MenuItens from './MenuItens'
 
-import Agenda from 'routes/Agenda'
-import Comunicados from 'routes/Comunicados'
-import Tutoriais from 'routes/Tutoriais'
-import Recrutamento from 'routes/Recrutamento'
-import Contato from 'routes/Contato'
-import Sobre from 'routes/Sobre'
-
-export const Data = [
-  {
-    title: 'Agenda',
-    path: '/agenda'
-  },
-  {
-    title: 'Comunicados',
-    path: '/comunicados'
-  },
-  {
-    title: 'Tutoriais',
-    path: '/tutoriais'
-  },
-  {
-    title: 'Recrutamento',
-    path: '/recrutamento'
-  },
-  {
-    title: 'Contato',
-    path: '/contato'
-  },
-  {
-    title: 'Sobre',
-    path: '/sobre'
-  }
-]
-
-const SideBar = () => {
+const SideBar = ({ rotas }) => {
   return (
     <Fragment>
       <SidebarNav>
@@ -53,7 +18,7 @@ const SideBar = () => {
               </TitleMenuHeader>
             </MenuHeader>
           </WrapMenuHeader>
-          <MenuItens data={Data}></MenuItens>
+          <MenuItens data={rotas}></MenuItens>
         </SidebarWrap>
       </SidebarNav>
     </Fragment>
