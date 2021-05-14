@@ -1,12 +1,7 @@
 import React from 'react'
-import Content from 'components/Content'
 
 const Comunicados = () => {
-  return (
-    <Content>
-      <p>Comunicado.</p>
-    </Content>
-  )
+  return <p>Comunicado.</p>
 }
 
 export default Comunicados

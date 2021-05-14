@@ -2,11 +2,7 @@ import React from 'react'
 import Content from 'components/Content'
 
 const Sobre = () => {
-  return (
-    <Content>
-      <p>Sobre.</p>
-    </Content>
-  )
+  return <p>Sobre.</p>
 }
 
 export default Sobre

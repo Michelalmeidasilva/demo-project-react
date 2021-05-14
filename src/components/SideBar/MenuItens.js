@@ -23,21 +23,13 @@ const Label = styled.span`
   margin-left: 30px;
   font-size: 22px;
 `
-const MenuItens = ({ data }) => {
-  return data.map(item => {
-    return <ContentItem item={item} />
-  })
-}
+const MenuItens = ({ data }) => data.map(item => <ContentItem item={item} />)
 
-const ContentItem = ({ item }) => {
+export const ContentItem = ({ item }) => {
   return (
-    <Fragment>
-      <Item to={item.path} onClick={item.subNav}>
-        <div>
-          <Label>{item.title}</Label>
-        </div>
-      </Item>{' '}
-    </Fragment>
+    <Item to={item.path} onClick={item.subNav}>
+      <Label>{item.title}</Label>
+    </Item>
   )
 }
 
