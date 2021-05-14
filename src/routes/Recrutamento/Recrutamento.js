@@ -2,11 +2,7 @@ import React from 'react'
 import Content from 'components/Content'
 
 const Recrutamento = () => {
-  return (
-    <Content>
-      <p>Recrutamento.</p>
-    </Content>
-  )
+  return <p>Recrutamento.</p>
 }
 
 export default Recrutamento
