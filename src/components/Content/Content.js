@@ -1,17 +1,20 @@
 import React from 'react'
 import SideBar from 'components/SideBar'
 import styled from 'styled-components'
+
+import Page from 'components/Page'
+
 const Content = ({ children, routes }) => {
+  console.log(children)
   return (
-    <Container>
+    <Wrapper>
       <SideBar routes={routes} />
-      {children}
-    </Container>
+      <Page children={children} />
+    </Wrapper>
   )
 }
 
-const Container = styled.div`
-  width: 100%;
+const Wrapper = styled.div`
   display: flex;
   flex-direction: row;
 `
