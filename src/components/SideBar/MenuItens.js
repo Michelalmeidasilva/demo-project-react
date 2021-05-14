@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
@@ -23,14 +23,11 @@ const Label = styled.span`
   margin-left: 30px;
   font-size: 22px;
 `
-const MenuItens = ({ data }) => data.map(item => <ContentItem item={item} />)
-
-export const ContentItem = ({ item }) => {
-  return (
-    <Item to={item.path} onClick={item.subNav}>
-      <Label>{item.title}</Label>
+const MenuItens = ({ routes }) =>
+  routes.map(route => (
+    <Item to={route.path}>
+      <Label>{route.title}</Label>
     </Item>
-  )
-}
+  ))
 
 export default MenuItens
