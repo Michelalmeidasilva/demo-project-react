@@ -37,3 +37,4 @@ const SidebarNav = styled.nav`
   width: 275px;
   height: 100vh;
 `
+export default SideBar
