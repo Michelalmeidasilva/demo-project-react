@@ -5,7 +5,6 @@ import styled from 'styled-components'
 import Page from 'components/Page'
 
 const Content = ({ children, routes }) => {
-  console.log(children)
   return (
     <Wrapper>
       <SideBar routes={routes} />
