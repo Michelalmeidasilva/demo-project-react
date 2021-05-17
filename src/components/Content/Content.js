@@ -9,7 +9,7 @@ const Content = ({ children, routes }) => {
   return (
     <Wrapper>
       <SideBar routes={routes} />
-      <Page children={children} />
+      <Page> {children}</Page>
     </Wrapper>
   )
 }
