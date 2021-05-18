@@ -1,8 +1,12 @@
-import React from 'react'
-import Content from 'components/Content'
+import React, { useState } from 'react'
+import { useForm } from 'react-hook-form'
+import FormRecrutamentoHtml from './RecrutamentoFormHtml'
+import { Card, Input } from 'components'
 
-const Recrutamento = () => {
-  return <p>Recrutamento.</p>
-}
+const Recrutamento = () => (
+  <div>
+    <FormRecrutamentoHtml></FormRecrutamentoHtml>
+  </div>
+)
 
 export default Recrutamento
