@@ -1,4 +1,4 @@
-const Card = ({ children }) => {
+const Card = ({ children }, props) => {
   return <div>{children}</div>
 }
 

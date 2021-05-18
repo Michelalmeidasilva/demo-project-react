@@ -1,6 +1,6 @@
 import { useRef } from 'react'
 
-const FormRecrutamentoHtml = () => {
+const RecrutamentoFormHtml = () => {
   const nicknameRef = useRef()
   const emailRef = useRef()
   const faccaoRef = useRef()
@@ -28,7 +28,7 @@ const FormRecrutamentoHtml = () => {
   }
 
   /**
-   * refs acess the dom elements
+   * refs acessam the dom elements
    */
   return (
     <div>
@@ -85,4 +85,4 @@ const inputStyle = {
   height: '30px',
   margin: '5px'
 }
-export default FormRecrutamentoHtml
+export default RecrutamentoFormHtml
