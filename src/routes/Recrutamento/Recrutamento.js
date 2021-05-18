@@ -1,8 +1,13 @@
 import React from 'react'
-import Content from 'components/Content'
 
-const Recrutamento = () => {
-  return <p>Recrutamento.</p>
-}
+import RecrutamentoFormHtml from './RecrutamentoFormHtml'
+import RecrutamentoFormHooks from './RecrutamentoFormHooks'
+
+const Recrutamento = () => (
+  <div>
+    {/* <RecrutamentoFormHtml></RecrutamentoFormHtml> */}
+    <RecrutamentoFormHooks></RecrutamentoFormHooks>
+  </div>
+)
 
 export default Recrutamento

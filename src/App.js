@@ -9,7 +9,7 @@ import Tutoriais from 'routes/Tutoriais'
 import Recrutamento from 'routes/Recrutamento'
 import Contato from 'routes/Contato'
 import Sobre from 'routes/Sobre'
-import Content from 'components/Content'
+import { Content } from 'components/Content'
 
 const GlobalStyle = createGlobalStyle`
 * {
