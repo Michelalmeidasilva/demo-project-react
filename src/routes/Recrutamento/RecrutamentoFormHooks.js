@@ -1,19 +1,40 @@
 import { useForm } from 'react-hook-form'
 
-import { Card, Input, Button } from 'components'
+import { Card, Input, Button, Select, TextArea } from 'components'
 
 const RecrutamentoFormHooks = () => {
   const { register, handleSubmit, errors } = useForm()
 
   const onSubmit = data => console.log(data)
+  const faccoes = [
+    {
+      value: 'horda',
+      label: 'Horda'
+    },
+    {
+      value: 'alliance',
+      label: 'Alliance'
+    }
+  ]
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <Input type='email' placeholder='digite' name='email' {...register('test', { required: true })} />
-      <Input type='text' placeholder='digite ' name='nickname' {...register('nickname', { required: true })} />
-      <Input type='text' placeholder='escolha' name='faccao' {...register('faccao', { required: true })} />
-      <Input type='submit' />
-    </form>
+    <Card
+      as='form'
+      onSubmit={handleSubmit(onSubmit)}
+      width={432}
+      padding={50}
+      borderRadius={4}
+      boxShadow='0px 2px 4px #21212133'
+    >
+      <Input name='email' label='Email' type='email' placeholder='digite' register={register} />
+      <Input name='nickname' label='Nickname' type='text' placeholder='digite ' register={register} />
+      <Select name='faccao' label='facção' options={faccoes} height='60px' register={register} />
+      <TextArea name='motivo' label='Por que você quer entrar na guild?' register={register} />
+
+      <Button color='black' type='submit' width='100px' height='30px'>
+        Submeter
+      </Button>
+    </Card>
   )
 }
 

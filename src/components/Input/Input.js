@@ -3,10 +3,10 @@ import styled from 'styled-components'
 
 import { Text, Column } from 'components'
 
-const Input = ({ label, name, ref, placeholder, type, error, ...props }) => (
+const Input = ({ label, name, placeholder, register, type, error, ...props }) => (
   <Column {...props}>
     {label && <Text mb={1}>{label}</Text>}
-    <InputWrapper type={type} name={name} placeholder={placeholder} error={error} />
+    <InputWrapper type={type} placeholder={placeholder} error={error} {...register(name, { required: true })} />
   </Column>
 )
 
@@ -16,6 +16,7 @@ const InputWrapper = styled.input`
   border-radius: 4px;
   padding: 4px 8px;
 `
+
 Input.defaultProps = {
   mb: 10
 }

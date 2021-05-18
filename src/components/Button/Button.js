@@ -1,25 +1,9 @@
 import React from 'react'
+import styled from 'styled-components'
+import { space, layout, typography, color, border } from 'styled-system'
 
-const ButtonComponent = ({ onClick, ...props }) => (
-  <button
-    onClick={onClick}
-    title='Learn More'
-    accessibilityLabel='Learn more about this purple button'
-    style={buttonStyle}
-  >
-    {' '}
-    Cliqe aqui
-  </button>
-)
+const Button = ({ children, ...props }) => <ButtonStyle {...props}>{children}</ButtonStyle>
 
-const buttonStyle = {
-  backgroundColor: 'red',
-  color: 'white',
-  width: '50px',
-  height: '80px',
-  padding: '10px',
-  fontFamily: 'Arial',
-  textAlign: 'center'
-}
+const ButtonStyle = styled.button(space, layout, typography, color, border)
 
-export default ButtonComponent
+export default Button
