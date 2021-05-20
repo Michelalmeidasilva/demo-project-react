@@ -1,23 +1,17 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-dom'
-import { createGlobalStyle } from 'styled-components'
+import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom'
+
+import GlobalStyle from './GlobalStyle'
+import { Content } from 'components/Content'
 
 import Home from 'routes/Home'
 import Agenda from 'routes/Agenda'
-import Comunicados from 'routes/Comunicados'
+import { Comunicados, ComunicadoDetails } from 'routes/Comunicados'
 import Tutoriais from 'routes/Tutoriais'
 import Recrutamento from 'routes/Recrutamento'
 import Contato from 'routes/Contato'
 import Sobre from 'routes/Sobre'
-import { Content } from 'components/Content'
 
-const GlobalStyle = createGlobalStyle`
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-`
 const routes = [
   {
     title: 'Agenda',
@@ -54,11 +48,11 @@ export default function App() {
           <Route path='/home' exact component={Home} />
           <Route path='/agenda' exact component={Agenda} />
           <Route path='/comunicados' exact component={Comunicados} />
-          <Route path='/tutoriais' exact component={Tutoriais} />
+          <Route exact path='/comunicados/details/' component={ComunicadoDetails} />
+          <Route path='/tutoriais' exact component={Tutoriais} params />
           <Route path='/recrutamento' exact component={Recrutamento} />
           <Route path='/contato' exact component={Contato} />
           <Route path='/sobre' exact component={Sobre} />
-          <Redirect to='/home' />
         </Content>
       </Router>
     </>
