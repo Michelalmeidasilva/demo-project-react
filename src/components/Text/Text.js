@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { space, layout, typography, color, variant, position } from 'styled-system'
 
+const EXTRA = 'extra'
 const BIG = 'big'
 const MEDIUM = 'medium'
 const REGULAR = 'regular'
@@ -10,6 +11,10 @@ const TINY = 'tiny'
 const Text = styled.p(
   variant({
     variants: {
+      [EXTRA]: {
+        fontSize: 28,
+        lineHeight: '40px'
+      },
       [BIG]: {
         fontSize: 24,
         lineHeight: '29px'

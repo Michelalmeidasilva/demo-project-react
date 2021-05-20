@@ -15,6 +15,6 @@ const TitleVideo = styled.text`
   font-size: 30px;
 `
 const Video = styled.div`
-  margin: 200px;
+  margin: 10px;
 `
 export default Tutoriais
