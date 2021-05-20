@@ -16,6 +16,7 @@ const ComunicadoDetails = () => {
     }
     fetchData()
   }, [])
+
   return (
     <div>
       <ItemDetail {...comunicado}></ItemDetail>
